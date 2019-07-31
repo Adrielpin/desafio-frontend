@@ -1,0 +1,33 @@
+.weather-details {
+    .box-shadow {
+        box-shadow: 0 .5rem 1rem rgba(0,0,0,.15);
+        &.mobile-disable-shadow {
+            @media (max-width: 768px) {
+                box-shadow: unset;
+            }
+        }
+        &.mobile-enable-shadow {
+            box-shadow: unset;
+            @media (max-width: 768px) {
+                box-shadow: 0 .5rem 1rem rgba(0,0,0,.15);
+            }
+        }
+    }
+    .weather-title {
+        margin-bottom: 20px;
+        @media (max-width: 768px) {
+            margin-top: 30px;
+        }
+    }
+    .card-group {
+        .card {
+            @media (max-width: 768px) {
+                border-top-left-radius: .25rem;
+                border-top-right-radius: .25rem;
+            }
+            @media (min-width: 576px) and (max-width: 768px) {
+                box-shadow: unset;
+            }
+        }
+    }
+}

@@ -1,0 +1,31 @@
+#banner {
+    background: #2d2d2d;
+    padding: 10px 0;
+    margin-bottom: 40px;
+    box-shadow: 0 .5rem 1rem rgba(0,0,0,.15);
+    p {
+        color: white;
+        margin: 0;
+    }
+    .image-container {
+        .logo-dark {
+            height: 30px;
+        }
+        .logo-subtext {
+            font-size: 10px;
+        }
+    }
+    .created-by {
+        justify-content: flex-end;
+        display: flex;
+        align-items: center;
+        @media (max-width: 768px) {
+            font-size: 10px;
+        }
+    }
+    @media (max-width: 767px) {
+        position: fixed;
+        width: 100%;
+        z-index: 100;
+    }
+}

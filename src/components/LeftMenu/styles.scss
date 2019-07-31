@@ -1,0 +1,97 @@
+.menu-container {
+    #location-search-wrap {
+        .location-search-form {
+            margin-bottom: 0;
+            position: relative;
+            box-shadow: 0 .5rem 1rem rgba(0,0,0,.15);
+            .location-search {
+                border-radius: .25rem .25rem 0 0;
+                border-bottom: 0;
+                min-height: 50px;
+            }
+            .add-location-btn {
+                position: absolute;
+                z-index: 5;
+                right: 0;
+                top: 0;
+                color: #fff;
+                background: #929292;
+                border-radius: 0 .25rem 0 0;
+                min-height: 50px;
+                transition: .2s ease;
+                box-shadow: 0;
+                &:hover, &:active, &:focus {
+                    background: #2d2d2d;
+                    box-shadow: 0 0 0 0.2rem #2d2d2d40;
+                }
+            }
+            &.full-radius {
+                .location-search {
+                    border-radius: .25rem .25rem .25rem .25rem;
+                }
+                .add-location-btn {
+                    border-radius: 0 .25rem .25rem 0;
+                }
+            }
+        }
+        @media (min-width: 768px) {
+            .list-group-item {
+                display: none;
+            }
+        }
+    }
+    .list-group {
+        box-shadow: 0 .5rem 1rem rgba(0,0,0,.15);
+        border-radius: 0 0 .25rem .25rem;
+        transition: 0.2s ease;
+        max-height: 100%;
+        @media (max-width: 768px) {
+            position: absolute;
+            width: calc(100% - 30px);
+            z-index: 9;
+        }
+        .list-group-item {
+            text-transform: capitalize;
+            transition: .2s ease;
+            &:hover {
+                background-color: #929292 !important;
+                border-color: #929292 !important;
+                cursor: pointer;
+                color: #fff;
+            }
+            &.active {
+                background-color: #2d2d2d;
+                border-color: #2d2d2d;
+            }
+            &:first-child {
+                border-top-left-radius: 0rem;
+                border-top-right-radius: 0rem;
+            }
+            span.delete {
+                position: absolute;
+                left: 5%;
+                &:hover {
+                    color: red;
+                }
+            }
+        }
+    }
+    &.menu-close {
+        .list-group {
+            @media (max-width: 767px) {
+                max-height: 0;
+                overflow: hidden;
+            }
+        }
+    }
+    &.menu-open {
+        .list-group {
+            @media (max-width: 767px) {
+                overflow: unset;
+            }
+        }
+    }
+    @media (max-width: 767px) {
+        position: relative;
+    }
+}
